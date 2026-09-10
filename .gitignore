@@ -1,0 +1,19 @@
+UCH/
+BepInEx/
+.DS_Store
+**/.DS_Store
+bin/
+obj/
+artifacts/
+.dotnet-home/
+.idea/
+.vs/
+.vscode/
+*.user
+*.suo
+*.nupkg
+*.zip
+
+# Never commit reverse-engineering output or proprietary game files.
+decompiled/
+game-dumps/

@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UCHFixes", "src/UCHFixes/UCHFixes.csproj", "{7F4C7528-67AF-4C94-9BF8-616D617B1111}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UCHFixes.Tests", "tests/UCHFixes.Tests/UCHFixes.Tests.csproj", "{3331F160-EC04-4B0F-A34A-A9F564232222}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F4C7528-67AF-4C94-9BF8-616D617B1111}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F4C7528-67AF-4C94-9BF8-616D617B1111}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F4C7528-67AF-4C94-9BF8-616D617B1111}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F4C7528-67AF-4C94-9BF8-616D617B1111}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3331F160-EC04-4B0F-A34A-A9F564232222}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3331F160-EC04-4B0F-A34A-A9F564232222}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3331F160-EC04-4B0F-A34A-A9F564232222}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3331F160-EC04-4B0F-A34A-A9F564232222}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
