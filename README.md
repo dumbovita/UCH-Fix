@@ -21,9 +21,10 @@ See [the reverse-engineering notes](docs/reverse-engineering.md) and [the Linux 
 ## Install
 
 1. Install [BepInEx 5.4.23.5](https://github.com/BepInEx/BepInEx/releases/tag/v5.4.23.5) into the Ultimate Chicken Horse directory. Use `BepInEx_win_x64` for the supplied Windows build (including Proton/Wine); use `BepInEx_linux_x64` only for a native 64-bit Linux Mono build.
-2. Run the game once so BepInEx creates its directories.
-3. Copy `UCHFixes.dll` to `BepInEx/plugins/UCHFixes/UCHFixes.dll`.
-4. Start the game and confirm `BepInEx/LogOutput.log` reports both fixes as enabled.
+2. For Proton/Wine, configure WinHTTP as a native-first library override. In Steam launch options, merge `winhttp=n,b` into any existing `WINEDLLOVERRIDES` value rather than replacing the other overrides. See the [official BepInEx Proton/Wine guide](https://docs.bepinex.dev/articles/advanced/proton_wine.html).
+3. Run the game once without UCH Fixes and confirm BepInEx creates `BepInEx/LogOutput.log`. Resolve loader failures before installing the plugin.
+4. Copy `UCHFixes.dll` to `BepInEx/plugins/UCHFixes/UCHFixes.dll`.
+5. Start the game and confirm `BepInEx/LogOutput.log` reports both fixes as enabled.
 
 The plugin does not require every peer to install it for the item gate: only the host performs arbitration, and all resulting messages remain vanilla-compatible. Installing it on every machine is recommended for the background fix and diagnostics.
 

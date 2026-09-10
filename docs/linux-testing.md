@@ -8,6 +8,8 @@ Setup:
 
 - Ultimate Chicken Horse 1.13.13 on Linux/Proton
 - BepInEx enabled
+- WinHTTP configured as a native-first Wine override (`winhttp=n,b`)
+- a fresh `BepInEx/LogOutput.log` proving the chainloader ran before UCH Fixes was installed
 - three online players; Player A hosts
 - UCH Fixes installed on the host; preferably on all clients for matching diagnostics
 - standard Party Box mode and placement timer enabled
@@ -39,6 +41,10 @@ Return:
 - whether anyone was stuck, skipped unexpectedly, or saw a phantom item/cursor;
 - whether couch co-op differed;
 - screenshots/video if UI state disagreed between clients.
+
+## Loader isolation when `LogOutput.log` is missing
+
+Do not begin multiplayer verification until BepInEx itself starts successfully. Temporarily rename the plugin so BepInEx will not discover it, set `redirect_output_log = true` in `doorstop_config.ini`, and launch once. Preserve the resulting `output_log.txt` or `Player.log`. If the game still exits and no `BepInEx/LogOutput.log` is created, the failure is below the plugin layer and must be resolved as a Doorstop/BepInEx/Proton issue first.
 
 ## Test B — background progression, remote client
 
